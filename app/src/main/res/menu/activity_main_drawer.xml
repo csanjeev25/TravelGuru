@@ -20,8 +20,8 @@
             android:title="Tools"/>
 
         <item
-            android:id="nav_slideshow"
-            android:icon="@drawable/ic_menu_share"
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="Slideshow"/>
     </group>
 
