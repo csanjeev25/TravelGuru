@@ -1,6 +1,89 @@
 <resources>
-    <string name="app_name">TravelGuru</string>
-    <string name="navigation_drawer_open">Open Navigation Drawer</string>
-    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="app_name">Gripsack</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
     <string name="action_settings">Settings</string>
+    <string name="label_google_sign_in">Google Sign In</string>
+    <string name="desc_google_sign_in">Use a Google Sign In credential to authenticate with Firebase.</string>
+
+    <string name="hint_user_id">User ID</string>
+    <string name="get_custom_token">Get Token</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_account">Create Account</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="loading">Loading…</string>
+    <string name="custom_token">Custom Token</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="token_null">Token: null</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="desc_firebase_lockup">Firebase logo and name</string>
+    <string name="auth_failed">Authentication failed</string>
+
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="firebase_user_management">Firebase User Management</string>
+
+    <string name="google_status_fmt">Google User: %s</string>
+    <string name="google_title_text">Google Sign In</string>
+    <string name="logout">Logout</string>
+    <string name="label_companions">Companions</string>
+    <string name="title_companions">Companions</string>
+    <string name="title_my_storage">My Storage</string>
+    <string name="title_my_media">My Media</string>
+    <string name="title_timeline">Timeline</string>
+    <string name="title_settings">Settings</string>
+
+    <string name="pref_enable_notifications_key" translatable="false">Enable_notifications</string>
+    <string name="pref_enable_notifications_label">Push Notifications</string>
+
+    <string name="pref_enable_notifications_true">Enabled</string>
+    <string name="pref_enable_notifications_false">Not Enabled</string>
+    <string name="pref_enable_notifications_default" translatable="false">true</string>
+
+    <string name="tab_places_bucketlist">Bucketlist</string>
+    <string name="tab_places_liked">Liked</string>
+    <string name="tab_places_recommended">Recommended</string>
+    <string name="tab_places_visited">Visited</string>
+    <string name="title_my_places">My Places</string>
+
+    <string name="tab_trips_upcoming">Upcoming</string>
+    <string name="tab_trips_completed">Completed</string>
+    <string name="tab_trips_maps">Maps</string>
+    <string name="tab_trips_photos">Photos</string>
+    <string name="title_my_trips">My Trips</string>
+
+
+    <string name="invitation_title">Send Connect Invitation</string>
+    <string name="invitation_message">Connect to share our future trips!</string>
+    <string name="invitation_deep_link"></string>
+    <string name="invitation_custom_image">https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png</string>
+    <string name="invitation_cta">Connect!</string>
+
+
+    <string name="send_failed">Sending invitations failed</string>
+
+    <string name="add_bucketlist">Added to BucketList</string>
+    <string name="add_likedlist">Added to LikedList</string>
+    <string name="add_trip">Added to Trip</string>
+    <string name="title_activity_add_trip"></string>
+    <string name="title_activity_edit_trip">Map</string>
+    <string name="title_activity_edit_destination">Map</string>
+    <string name="title_activity_destinations">DestinationsActivity</string>
+    <string name="title_activity_trip_timeline">TripTimelineActivity</string>
+    <string name="menu_item_settings">Settings</string>
+    <string name="menu_label_my_trips">My Trips</string>
+    <string name="menu_item_trips_upcoming">Upcoming</string>
+    <string name="menu_item_trips_past">Past</string>
+    <string name="menu_item_companions">Companions</string>
+    <string name="menu_label_my_places">My Places</string>
+    <string name="menu_item_place_bucketlist">Bucketlist</string>
+    <string name="menu_item_place_visited">Visited</string>
+    <string name="menu_item_place_recommended">Recommended</string>
+    <string name="menu_item_my_storage">My Storage</string>
+    <string name="title_activity_add_companion">AddCompanionActivity</string>
+
+
 </resources>

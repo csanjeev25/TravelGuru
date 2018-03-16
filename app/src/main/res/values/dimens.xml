@@ -1,8 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="nav_header_height">160dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+
+    <dimen name="icon_top_margin">24dp</dimen>
+    <dimen name="icon_bottom_margin">24dp</dimen>
+    <dimen name="title_bottom_margin">16dp</dimen>
+    <dimen name="field_width_standard">160dp</dimen>
+
+    <dimen name="recycler_view_padding_side">12dp</dimen>
+    <dimen name="recycler_view_padding_up">8dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="detail_photo_height">304dp</dimen>
+
+    <dimen name="keyline_margin">4dp</dimen>
+    <dimen name="card_image_height">200dp</dimen>
+    <dimen name="md_keylines">8dp</dimen>
+    <dimen name="card_title_height">30dp</dimen>
+    <dimen name="card_height">240dp</dimen>
+
+
+    <dimen name="fab_elevation">6dp</dimen>
+
+
+
+    <!--Change this-->
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="grid_margin">12dp</dimen>
+    <dimen name="cell_margin">12dp</dimen>
+    <dimen name="grid_profile_height">160dp</dimen>
+    <dimen name="palette_height">56dp</dimen>
+    <dimen name="contact_detail_image_height">380dp</dimen>
+    <dimen name="contact_text_size">18sp</dimen>
+    <dimen name="contact_details_phone_margin_top">8dp</dimen>
+
 </resources>

@@ -5,36 +5,40 @@
 
         android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_explore"
             android:icon="@drawable/ic_menu_camera"
-            android:title="import"/>
+            android:title="Explore"/>
 
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_places"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery"/>
+            android:title="My Places"/>
 
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_companions"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools"/>
+            android:title="Companions"/>
 
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow"/>
+            android:title="My Trips"
+            android:icon="@drawable/ic_menu_gallery"
+            android:id="@+id/nav_trips"/>
+        <item
+            android:title="Timeline"
+            android:icon="@drawable/ic_menu_send"
+            android:id="@+id/nav_timeline"/>
+        <item
+            android:title="My Media"
+            android:icon="@drawable/ic_menu_gallery"
+            android:id="@+id/nav_media"/>
+        <item
+            android:title="My Storage"
+            android:icon="@drawable/ic_menu_manage"
+            android:id="@+id/nav_files"/>
     </group>
 
-    <item android:title="Communication">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share"/>
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Share"/>
-        </menu>
-    </item>
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_menu_manage"
+        android:title="Settings"/>
 </menu>

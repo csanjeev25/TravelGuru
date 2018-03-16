@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/main_layout"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/grey_100"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="154dp"
+        android:src="@drawable/ic_launcher_background"
+        style="@style/ThemeOverlay.FirebaseeIcon"
+        android:id="@+id/google_icon"
+        android:contentDescription="@string/desc_firebase_lockup" />
+
+    <com.google.android.gms.common.SignInButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/google_sign_in_button"/>
+
+</LinearLayout>

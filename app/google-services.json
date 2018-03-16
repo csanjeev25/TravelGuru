@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "607763277307",
+    "firebase_url": "https://travelguru-e3f3d.firebaseio.com",
+    "project_id": "travelguru-e3f3d",
+    "storage_bucket": "travelguru-e3f3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607763277307:android:cdc4a3453f11d7ac",
+        "android_client_info": {
+          "package_name": "com.insomniac.travelguru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607763277307-s982na1hrog0e1sktsb8c3e8249lunlr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.insomniac.travelguru",
+            "certificate_hash": "92b780e8d6f8e69ca234b0c8ecaffc33230c9c0d"
+          }
+        },
+        {
+          "client_id": "607763277307-v0sf5a3o01c986eagkhfoesvbbj9g8jf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4H4mG3EDq0ARJsU4ornO5NszM4PO_RnM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607763277307-v0sf5a3o01c986eagkhfoesvbbj9g8jf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,9 +1,13 @@
 package com.insomniac.travelguru;
 
+import android.content.Intent;
+import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -14,79 +18,94 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.firebase.auth.FirebaseAuth;
+
+public class MainActivity extends DrawerActivity{
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected GoogleApiClient createGoogleApiClient() {
+        return GoogleUtils.getGoogleApiClient(this, new GoogleApiClient.OnConnectionFailedListener() {
+            @Override
+            public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+                //
+            }
+        });
+    }
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+    @Override
+    protected Fragment createFragment() {
+        return MainActivityFragment.newInstance(this);
+    }
+
+    @Override
+    protected FirebaseAuth.AuthStateListener createAuthStateListener() {
+        return new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                updateNavigationView();
+            }
+        };
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
+        super.onCreate(savedInstanceState, persistentState);
 
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view,"Replace with your action",Snackbar.LENGTH_LONG).setAction("Action",null).show();
+                Snackbar.make(view,"cool",Snackbar.LENGTH_SHORT).setAction("Action",null).show();
             }
         });
-
-        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
     }
 
+    @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public void onBackPressed() {
-        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if(drawerLayout.isDrawerOpen(GravityCompat.START))
-            drawerLayout.closeDrawer(GravityCompat.START);
-        else
-            super.onBackPressed();
-    }
+    public boolean onNavigationItemSelected(MenuItem item) {
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main,menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
         int id = item.getItemId();
-        if(id==R.id.action_settings){
-            return  true;
+
+        switch (id) {
+            case R.id.nav_explore:
+                break;
+            case R.id.nav_places:
+                intent = PlacesActivity.newIntent(this);
+                startActivity(intent);
+                break;
+            case R.id.nav_trips:
+                intent = TripsActivity.newIntent(this);
+                startActivity(intent);
+                break;
+            case R.id.nav_timeline:
+                intent = TimelineActivity.newIntent(this);
+                startActivity(intent);
+                break;
+            case R.id.nav_media:
+                intent = MediaActivity.newIntent(this);
+                startActivity(intent);
+                break;
+            case R.id.nav_files:
+                intent = FilesActivity.newIntent(this);
+                startActivity(intent);
+                break;
+            case R.id.nav_companions:
+                intent = CompanionsActivity.newIntent(this);
+                startActivity(intent);
+                break;
+            case R.id.nav_settings:
+                intent = SettingsActvity.newIntent(this);
+                startActivity(intent);
+                break;
         }
-        return super.onOptionsItemSelected(item);
-    }
 
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-       int id = item.getItemId();
-       if(id==R.id.nav_camera)
-           return true;
-       if(id==R.id.nav_gallery)
-           return true;
-       if(id==R.id.nav_manage)
-           return true;
-       if(id==R.id.nav_view)
-           return true;
-       if(id==R.id.nav_share)
-           return true;
-
-       DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-       drawerLayout.closeDrawer(GravityCompat.START);
-       return true;
-    }
-
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 }
